@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 def post_list(request):
-    return HttpResponse("리스트 만들기")
+    # return HttpResponse("리스트 만들기")
+    return render(request, 'blog/post_list.html')
