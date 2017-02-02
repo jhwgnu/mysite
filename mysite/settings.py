@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'webtoon',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
