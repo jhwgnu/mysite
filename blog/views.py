@@ -3,4 +3,9 @@ from django.shortcuts import render
 
 def post_list(request):
     # return HttpResponse("리스트 만들기")
-    return render(request, 'blog/post_list.html')
+    return render(request, 'blog/post_list.html', {
+        'post_list': Post.objects.all(),
+    })
+
+def post_detail(request, pk):
+    pass
