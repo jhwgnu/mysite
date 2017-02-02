@@ -6,6 +6,11 @@
 </head>
 
 <body>
+
+  <form method="GET" action="">
+    <input type="text" name="q" value="{{ q }}" />
+    <input type="submit" value="검색" />
+  </form>
   <ul>
     {% for webtoon in webtoon_list %}
     <li>
