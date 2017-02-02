@@ -1,8 +1,11 @@
 from django.conf.urls import url
 from django.contrib import admin
-from blog import views
+from blog import views as blog_views
+from webtoon import views as webtoon_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.post_list)
+    url(r'^$', views.post_list),
+    url(r'^webtoon/$', webtoon_views.webtoon_list),
+    url(r'^webtoon/(?P<id>\d+)$', webtoon_views.webtoon_detail),
 ]
