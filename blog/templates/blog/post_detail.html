@@ -1,5 +1,21 @@
-{{% extends "blog/layout.html" %}}
+{% extends "blog/layout.html" %}
 
 {% block content1 %}
-디테일
+<h2>{{ post.title }}</h2>
+<ul>
+  Tags:
+  {% for tag in post.tag_set.all %}
+    {{ tag.name }}
+  {% endfor %}
+
+{{ post.content|linebreaks }}
+
+<h3>댓글</h3>
+<ul>
+  {% for comment in post.comment_set.all %}
+  <li>
+    {{ comment.message }}
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}

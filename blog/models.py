@@ -10,9 +10,16 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    class meta:
+        ordering = ['-id']
+
 class Comment(models.Model):
     post = models.ForeignKey(Post)
     message = models.TextField()
+
+    def __str__(self):
+        return self.message
+
 
 class Tag(models.Model):
     name = models.CharField(max_length=100)
