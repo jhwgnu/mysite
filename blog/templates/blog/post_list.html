@@ -1,5 +1,12 @@
 <!doctype html>
 <html>
 <meta charset="utf-8" />
-mysite 메인 페이지
+  <ul>
+  {% for post in post_list %}
+    <li>
+      {{ post.title }}
+      <small> at {{ post.updated_at }}</small>
+    </li>
+  {% endfor %}
+  </ul>
 </html>

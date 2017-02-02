@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from blog.models import Post, Comment
 # from django.http import HttpResponse
 
 def post_list(request):
