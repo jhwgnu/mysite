@@ -1,10 +1,12 @@
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.shortcuts import redirect
 # from blog import views as blog_views
 # from webtoon import views as webtoon_views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),    
-    url(r'^blog/', include('webtoon.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^$', lambda request: redirect('post_list')),
+    url(r'^blog/', include('blog.urls')),
     url(r'^webtoon/', include('webtoon.urls')),
 ]
