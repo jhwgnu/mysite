@@ -6,7 +6,8 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', lambda request: redirect('post_list')),
-    url(r'^blog/', include('blog.urls')),
-    url(r'^webtoon/', include('webtoon.urls')),
+    url(r'^$', lambda request: redirect('blog:post_list')),
+    url(r'^blog/', include('blog.urls', namespace='blog')),
+    url(r'^webtoon/', include('webtoon.urls', namespace='webtoon')),
+    # url(r'^journal/', include('journal.urls')),
 ]
