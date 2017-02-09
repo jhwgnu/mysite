@@ -9,5 +9,5 @@ urlpatterns = [
     url(r'^$', lambda request: redirect('blog:post_list')),
     url(r'^blog/', include('blog.urls', namespace='blog')),
     url(r'^webtoon/', include('webtoon.urls', namespace='webtoon')),
-    url(r'^journal/', include('journal.urls', namespace='journal')),
+    url(r'^news/', include('news.urls', namespace='news')),
 ]
