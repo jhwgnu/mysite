@@ -9,3 +9,6 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('journal:post_detail', args=[self.pk])
+
+    def __str__(self):
+        return self.title
