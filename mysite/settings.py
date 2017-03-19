@@ -26,6 +26,7 @@ SECRET_KEY = '0+-eej0gfdfs+b3)#2%m*d3xty+^s(o$6by(wt#dyi8p1xw@9='
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['A.B.C.D']
 
 
 # Application definition
@@ -40,7 +41,7 @@ INSTALLED_APPS = [
     'blog',
     'webtoon',
     'news',
-    'django_extensions',
+    # 'django_extensions',
 ]
 
 MIDDLEWARE = [
